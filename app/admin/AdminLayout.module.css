@@ -1,0 +1,33 @@
+/* Admin Container */
+.adminContainer {
+  display: flex;
+  height: 100vh;
+  background-color: #f3f4f6;
+}
+
+/* Main Content Area */
+.adminMain {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  background-color: #f9fafb;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  .adminContainer {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .adminMain {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .adminMain {
+    padding: 1rem;
+  }
+}
