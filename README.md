@@ -191,4 +191,3 @@ Migrate SQLite → PostgreSQL (optional)
 👨‍💻 Author
 
 Kevin Fernandes
-GitHub: https://github.com/kevinfernandes-hub
