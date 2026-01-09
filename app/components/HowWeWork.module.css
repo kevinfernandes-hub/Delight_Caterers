@@ -1,0 +1,92 @@
+.howWeWork {
+  padding: 5rem 2rem;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #2d2520;
+  margin: 0 0 4rem 0;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.stepCard {
+  text-align: center;
+}
+
+.stepNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background: #faf8f6;
+  border: 2px solid #8b7355;
+  border-radius: 50%;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #8b7355;
+  margin-bottom: 1.5rem;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.stepTitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #2d2520;
+  margin: 0 0 1rem 0;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.stepDescription {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .howWeWork {
+    padding: 3rem 1.5rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .stepsGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .stepNumber {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .stepTitle {
+    font-size: 1.1rem;
+  }
+
+  .stepDescription {
+    font-size: 0.9rem;
+  }
+}

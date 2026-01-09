@@ -1,0 +1,72 @@
+.cuisineSection {
+  padding: 5rem 2rem;
+  background: #faf8f6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #2d2520;
+  margin: 0 0 3rem 0;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.cuisineList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.cuisineItem {
+  padding: 2rem;
+  background: white;
+  border: 1px solid #f0ebe5;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.cuisineItem:hover {
+  border-color: #8b7355;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.cuisineName {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2d2520;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cuisineSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .cuisineList {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cuisineItem {
+    padding: 1.5rem;
+  }
+
+  .cuisineName {
+    font-size: 1rem;
+  }
+}

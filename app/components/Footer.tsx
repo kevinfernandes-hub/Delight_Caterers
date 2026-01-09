@@ -18,7 +18,7 @@ export default function Footer() {
           <h4 className={styles.subheading}>Contact Us</h4>
           <div className={styles.contactItem}>
             <span className={styles.icon}>📞</span>
-            <a href="tel:+919876543210">+91 98765 43210</a>
+            <a href="tel:+919689330035">+91 9689330035</a>
           </div>
           <div className={styles.contactItem}>
             <span className={styles.icon}>📍</span>
@@ -46,8 +46,9 @@ export default function Footer() {
       {/* Divider */}
       <div className={styles.divider}></div>
 
-      {/* Copyright */}
+      {/* Credibility and Copyright */}
       <div className={styles.copyright}>
+        <p className={styles.credibility}>Established in 2012 • Founded by Merwyn Fernandes</p>
         <p>&copy; Delight Caterers. All rights reserved.</p>
       </div>
     </footer>

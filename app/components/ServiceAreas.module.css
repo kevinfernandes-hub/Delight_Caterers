@@ -1,0 +1,97 @@
+.serviceAreasSection {
+  padding: 5rem 2rem;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #2d2520;
+  margin: 0 0 3rem 0;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.description {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.8;
+  margin: 0 0 2.5rem 0;
+  text-align: center;
+  font-weight: 400;
+}
+
+.areasList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.areaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #faf8f6;
+  border-radius: 8px;
+  border: 1px solid #f0ebe5;
+  transition: all 0.3s ease;
+}
+
+.areaItem:hover {
+  background: #f5f2ee;
+  border-color: #8b7355;
+}
+
+.areaDot {
+  color: #8b7355;
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.areaName {
+  font-size: 1rem;
+  color: #2d2520;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .serviceAreasSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .areasList {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .areaItem {
+    padding: 0.875rem;
+  }
+
+  .areaName {
+    font-size: 0.95rem;
+  }
+}

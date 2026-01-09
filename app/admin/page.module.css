@@ -7,21 +7,22 @@
 .pageHeader {
   margin-bottom: 2.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #f0ebe5;
 }
 
 .pageTitle {
   font-size: 2rem;
-  font-weight: 900;
-  color: #111827;
+  font-weight: 500;
+  color: #2d2520;
   margin: 0 0 0.5rem 0;
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 .pageSubtitle {
   font-size: 1rem;
-  color: #6b7280;
+  color: #4b5563;
   margin: 0;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* Stats Section */
@@ -51,7 +52,7 @@
 .statCard:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
-  border-color: #d1d5db;
+  border-color: #8b7355;
 }
 
 .statIcon {
@@ -66,23 +67,23 @@
 }
 
 .iconblue {
-  background-color: #dbeafe;
-  color: #1e40af;
+  background-color: #e8dfd6;
+  color: #8b7355;
 }
 
 .icongreen {
-  background-color: #dcfce7;
-  color: #166534;
+  background-color: #e8dfd6;
+  color: #8b7355;
 }
 
 .iconpurple {
-  background-color: #e9d5ff;
-  color: #6b21a8;
+  background-color: #e8dfd6;
+  color: #8b7355;
 }
 
 .iconorange {
-  background-color: #fed7aa;
-  color: #92400e;
+  background-color: #e8dfd6;
+  color: #8b7355;
 }
 
 .statContent {
@@ -91,24 +92,25 @@
 
 .statLabel {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: #4b5563;
   margin: 0 0 0.25rem 0;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .statValue {
   font-size: 1.75rem;
-  font-weight: 800;
-  color: #111827;
+  font-weight: 500;
+  color: #2d2520;
   margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 /* Activity Section */
 .activitySection {
   background-color: white;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #f0ebe5;
   border-radius: 0.75rem;
   padding: 2rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -116,11 +118,12 @@
 
 .sectionTitle {
   font-size: 1.25rem;
-  font-weight: 800;
-  color: #111827;
+  font-weight: 500;
+  color: #2d2520;
   margin: 0 0 1.5rem 0;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #f3f4f6;
+  border-bottom: 1px solid #f0ebe5;
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 .activityList {
@@ -135,12 +138,12 @@
   gap: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: #f9fafb;
+  background-color: #faf8f6;
   transition: all 0.3s ease;
 }
 
 .activityItem:hover {
-  background-color: #f3f4f6;
+  background-color: #f5f2ee;
 }
 
 .activityIcon {

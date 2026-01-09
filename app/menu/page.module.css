@@ -1,14 +1,17 @@
 /* Main Container */
 .menuMain {
   width: 100%;
+  background-color: #f8f7f6;
+  min-height: 100vh;
 }
 
-/* Page Header Section */
+/* Page Header */
 .pageHeader {
-  background: linear-gradient(135deg, #f3f4f6 0%, #f9fafb 100%);
-  padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #faf8f6 100%);
+  padding: 3.5rem 1.5rem;
   text-align: center;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e8dfd6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .headerContent {
@@ -17,312 +20,855 @@
 }
 
 .pageTitle {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 900;
-  color: #111827;
-  margin-bottom: 0.75rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 500;
+  color: #2d2520;
+  margin-bottom: 0.5rem;
   line-height: 1.2;
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 .pageSubtitle {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  color: #6b7280;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: #6b5d54;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Guest Section */
+.guestSection {
+  padding: 2.5rem 1.5rem;
+  background: white;
+  border-bottom: 1px solid #e8dfd6;
+}
+
+.guestContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.guestLabel {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2d2520;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.guestOptions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.guestBtn {
+  padding: 0.65rem 1.25rem;
+  border: 2px solid #d5c8bd;
+  background-color: white;
+  color: #2d2520;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.guestBtn:hover {
+  border-color: #8b7355;
+  background-color: #faf8f6;
+}
+
+.guestBtnActive {
+  background-color: #8b7355;
+  color: white;
+  border-color: #8b7355;
+  box-shadow: 0 4px 12px rgba(139, 115, 85, 0.15);
+}
+
+/* Package Selection Section */
+.packageSection {
+  padding: 3rem 1.5rem;
+  background: white;
+  border-bottom: 1px solid #e8dfd6;
+}
+
+.packageContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.packageSectionTitle {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #2d2520;
+  margin: 0 0 0.5rem 0;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.packageNote {
+  font-size: 0.9rem;
+  color: #8b8078;
+  margin: 0 0 1.75rem 0;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.packageNote::before {
+  content: '💡';
+  font-size: 1rem;
+}
+
+.packageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.packageButton {
+  padding: 1.75rem 1.5rem;
+  background: white;
+  border: 2px solid #d5c8bd;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.packageButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.packageButton:hover::before {
+  left: 100%;
+}
+
+.packageButton:hover {
+  border-color: #8b7355;
+  background-color: #faf8f6;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(139, 115, 85, 0.12);
+}
+
+.packageButtonActive {
+  background: linear-gradient(135deg, #8b7355 0%, #9d8469 100%);
+  border-color: #7a6449;
+  color: white;
+  box-shadow: 0 8px 20px rgba(139, 115, 85, 0.2);
+  position: relative;
+}
+
+.packageButtonActive::after {
+  content: '✓';
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  opacity: 0.9;
+}
+
+.packageName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: inherit;
+}
+
+.packageButtonActive .packageName {
+  color: white;
+}
+
+.packagePrice {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #8b7355;
+}
+
+.packageButtonActive .packagePrice {
+  color: white;
+}
+
+.packageSubtext {
+  font-size: 0.8rem;
+  color: #8b8078;
   font-weight: 500;
 }
 
-/* Menu Section */
-.menuSection {
-  padding: 4rem 1.5rem;
-  background-color: white;
+.packageButtonActive .packageSubtext {
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.menuContainer {
-  max-width: 80rem;
+/* Main Content Area - 2 Columns */
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  padding: 2.5rem 1.5rem;
+  max-width: 1600px;
   margin: 0 auto;
+}
+
+/* Menu Grid Section */
+.menuGridSection {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .menuGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
 }
 
 /* Menu Card */
 .menuCard {
-  background-color: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 2px solid #e8dfd6;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .menuCard:hover {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  transform: translateY(-8px);
-  border-color: #dc2626;
+  border-color: #8b7355;
+  box-shadow: 0 6px 16px rgba(139, 115, 85, 0.1);
+  transform: translateY(-2px);
 }
 
-/* Image Placeholder */
-.imagePlaceholder {
-  position: relative;
+.menuCardSelected {
+  border-color: #8b7355;
+  background-color: #faf8f6;
+  box-shadow: 0 6px 16px rgba(139, 115, 85, 0.12);
+}
+
+.menuCardSelected .dishCheckbox {
+  accent-color: #8b7355;
+}
+
+/* Card Image */
+.cardImage {
   width: 100%;
-  height: 200px;
+  height: 160px;
   overflow: hidden;
-  background-color: #f3f4f6;
+  background: #f0ebe5;
 }
 
-.imageGradient {
+.cardImage img {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #fecaca 0%, #fed7aa 50%, #fca5a5 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.menuCard:hover .imageGradient {
+.menuCard:hover .cardImage img {
   transform: scale(1.05);
-}
-
-/* Category Badge */
-.categoryBadge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  display: inline-block;
-  background-color: #dc2626;
-  color: white;
-  padding: 0.375rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
 }
 
 /* Card Content */
 .cardContent {
-  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem;
 }
 
 .dishName {
-  font-size: 1.375rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d2520;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.3;
 }
 
-.dishDescription {
-  font-size: 0.95rem;
-  color: #6b7280;
-  margin-bottom: 1.25rem;
-  line-height: 1.6;
+.dishCategory {
+  font-size: 0.8rem;
+  color: #8b7355;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 500;
 }
 
 /* Card Footer */
 .cardFooter {
   display: flex;
-  align-items: baseline;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid #f0ebe5;
+}
+
+.dishPrice {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #8b7355;
+}
+
+.dishCheckbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #8b7355;
+  transition: all 0.2s ease;
+}
+
+/* Summary Sidebar */
+.summarySidebar {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e8dfd6;
+  padding: 0;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.summaryContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.summaryTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #2d2520;
+  margin: 0 0 1.25rem 0;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Package Display in Summary */
+.packageDisplay {
+  display: flex;
   gap: 0.5rem;
+  align-items: baseline;
+  margin-bottom: 0;
 }
 
-.price {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #dc2626;
+.packageDisplayLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #8b8078;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-.perPlate {
-  font-size: 0.875rem;
-  color: #9ca3af;
+.packageDisplayValue {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #8b7355;
+}
+
+/* Guest Info in Summary */
+.summarySection {
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #e8dfd6;
+}
+
+.guestInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0.75rem;
+  background: #faf8f6;
+  border-radius: 6px;
+}
+
+.guestInfoLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6b5d54;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.guestInfoValue {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #8b7355;
+}
+
+/* Empty Summary State */
+.emptySummary {
+  text-align: center;
+  padding: 2rem 0;
+  color: #8b8078;
+}
+
+.emptySummary p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Selected Title */
+.selectedTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2d2520;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Selected Dishes List */
+.selectedDishesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.selectedDish {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem;
+  background: #faf8f6;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.selectedDishName {
+  font-weight: 500;
+  color: #2d2520;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.selectedDishPrice {
+  font-weight: 600;
+  color: #8b7355;
+  margin-left: 0.5rem;
+  white-space: nowrap;
+}
+
+/* Pricing Summary */
+.pricingSummary {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #faf8f6;
+  border-radius: 6px;
+}
+
+.pricingRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #2d2520;
+}
+
+.pricingLabel {
   font-weight: 500;
 }
 
-/* CTA Section */
-.ctaSection {
-  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
-  padding: 4rem 1.5rem;
-  text-align: center;
-  color: white;
+.pricingValue {
+  font-weight: 600;
+  color: #8b7355;
 }
 
-.ctaContainer {
-  max-width: 56rem;
+/* Total Section */
+.totalSection {
+  background: linear-gradient(135deg, #ffffff 0%, #f5f2ee 100%);
+  border: 2px solid #8b7355;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.totalLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b5d54;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.totalAmount {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #8b7355;
+  margin: 0;
+}
+
+/* Reset Button */
+.resetBtn {
+  width: 100%;
+  padding: 0.8rem;
+  background: white;
+  border: 2px solid #d5c8bd;
+  color: #2d2520;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.resetBtn:hover {
+  border-color: #8b7355;
+  background: #faf8f6;
+  color: #8b7355;
+}
+
+/* Info Section */
+.infoSection {
+  background: linear-gradient(135deg, #8b7355 0%, #6b5842 100%);
+  padding: 4rem 1.5rem;
+  text-align: center;
+  border-top: 1px solid #6b5842;
+}
+
+.infoContainer {
+  max-width: 600px;
   margin: 0 auto;
 }
 
-.ctaTitle {
-  font-size: clamp(1.875rem, 4vw, 2.5rem);
-  font-weight: 900;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+.infoTitle {
+  font-size: 1.85rem;
+  font-weight: 500;
+  color: white;
+  margin: 0 0 1rem 0;
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
-.ctaText {
-  font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.95);
-  margin-bottom: 2rem;
+.infoText {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 2rem 0;
   line-height: 1.6;
 }
 
-.ctaButton {
+.infoButton {
   display: inline-block;
-  background-color: white;
-  color: #dc2626;
-  padding: 1rem 2.5rem;
-  border: none;
-  border-radius: 0.5rem;
-  font-size: 1rem;
+  padding: 0.95rem 2.25rem;
+  background: white;
+  color: #8b7355;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 2px solid white;
 }
 
-.ctaButton:hover {
-  background-color: #f3f4f6;
+.infoButton:hover {
+  background: #faf8f6;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .pageHeader {
-    padding: 3rem 1.5rem;
-  }
+/* Loading, Error, Empty States */
+.loadingMessage,
+.errorMessage,
+.emptyMessage {
+  text-align: center;
+  padding: 3rem 2rem;
+  font-size: 1rem;
+  color: #6b5d54;
+  background: white;
+  border-radius: 8px;
+}
 
-  .menuSection {
-    padding: 3rem 1.5rem;
-  }
+.errorMessage {
+  color: #c41e3a;
+  background: #fff5f5;
+}
 
-  .menuGrid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .mainContent {
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .imagePlaceholder {
-    height: 180px;
+  .summarySidebar {
+    position: static;
+    top: auto;
   }
 
-  .cardContent {
-    padding: 1.25rem;
-  }
-
-  .dishName {
-    font-size: 1.25rem;
-  }
-
-  .ctaSection {
-    padding: 3rem 1.5rem;
+  .menuGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .pageHeader {
     padding: 2.5rem 1rem;
   }
 
   .pageTitle {
-    font-size: 1.875rem;
+    font-size: 1.6rem;
   }
 
   .pageSubtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
-  .menuSection {
+  .guestSection {
     padding: 2rem 1rem;
   }
 
-  .menuGrid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+  .guestOptions {
+    gap: 0.5rem;
   }
 
-  .imagePlaceholder {
-    height: 200px;
-  }
-
-  .cardContent {
-    padding: 1.25rem;
-  }
-
-  .dishDescription {
+  .guestBtn {
+    padding: 0.6rem 1rem;
     font-size: 0.9rem;
   }
 
-  .ctaSection {
-    padding: 2.5rem 1rem;
+  .mainContent {
+    padding: 1.5rem 1rem;
+    gap: 1rem;
   }
 
-  .ctaTitle {
+  .menuGridSection {
+    padding: 1.5rem;
+  }
+
+  .menuGrid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+
+  .cardImage {
+    height: 140px;
+  }
+
+  .cardContent {
+    padding: 0.75rem;
+  }
+
+  .dishName {
+    font-size: 0.9rem;
+  }
+
+  .cardFooter {
+    padding-top: 0.5rem;
+  }
+
+  .summarySidebar {
+    border-radius: 6px;
+  }
+
+  .summaryContent {
+    padding: 1.25rem;
+  }
+
+  .summaryTitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .selectedDishesList {
+    max-height: 150px;
+  }
+
+  .totalAmount {
     font-size: 1.5rem;
   }
 
-  .ctaText {
-    font-size: 1rem;
+  .infoSection {
+    padding: 3rem 1rem;
   }
 
-  .ctaButton {
-    width: 100%;
+  .infoTitle {
+    font-size: 1.5rem;
+  }
+
+  .infoText {
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 480px) {
   .pageHeader {
-    padding: 2rem 0.75rem;
-  }
-
-  .pageTitle {
-    font-size: 1.625rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .menuSection {
     padding: 1.5rem 0.75rem;
   }
 
-  .imagePlaceholder {
-    height: 160px;
+  .pageTitle {
+    font-size: 1.3rem;
   }
 
-  .cardContent {
-    padding: 1rem;
-  }
-
-  .dishName {
-    font-size: 1.125rem;
-    margin-bottom: 0.375rem;
-  }
-
-  .dishDescription {
+  .pageSubtitle {
     font-size: 0.85rem;
-    margin-bottom: 1rem;
   }
 
-  .price {
-    font-size: 1.25rem;
+  .guestSection {
+    padding: 1.5rem 0.75rem;
   }
 
-  .ctaSection {
-    padding: 2rem 0.75rem;
-  }
-
-  .ctaTitle {
-    font-size: 1.375rem;
+  .guestLabel {
+    font-size: 0.8rem;
     margin-bottom: 0.75rem;
   }
 
-  .ctaText {
-    font-size: 0.95rem;
+  .guestOptions {
+    gap: 0.4rem;
   }
 
-  .ctaButton {
-    padding: 0.875rem 2rem;
-    font-size: 0.95rem;
+  .guestBtn {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  .mainContent {
+    padding: 1rem 0.75rem;
+  }
+
+  .menuGridSection {
+    padding: 1rem;
+  }
+
+  .menuGrid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .cardImage {
+    height: 120px;
+  }
+
+  .cardContent {
+    padding: 0.6rem;
+  }
+
+  .dishName {
+    font-size: 0.8rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .dishCategory {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cardFooter {
+    padding-top: 0.4rem;
+  }
+
+  .dishPrice {
+    font-size: 0.85rem;
+  }
+
+  .dishCheckbox {
+    width: 18px;
+    height: 18px;
+  }
+
+  .summarySidebar {
+    border-radius: 4px;
+  }
+
+  .summaryContent {
+    padding: 1rem;
+  }
+
+  .summaryTitle {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .guestInfoValue {
+    font-size: 1.1rem;
+  }
+
+  .selectedTitle {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .selectedDishesList {
+    max-height: 120px;
+  }
+
+  .selectedDish {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .pricingSummary {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+  }
+
+  .pricingRow {
+    padding: 0.35rem 0;
+    font-size: 0.8rem;
+  }
+
+  .totalSection {
+    padding: 0.75rem;
+    margin-top: 0.75rem;
+  }
+
+  .totalLabel {
+    font-size: 0.65rem;
+  }
+
+  .totalAmount {
+    font-size: 1.3rem;
+  }
+
+  .resetBtn {
+    padding: 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .infoSection {
+    padding: 2rem 0.75rem;
+  }
+
+  .infoTitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .infoText {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .infoButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
   }
 }

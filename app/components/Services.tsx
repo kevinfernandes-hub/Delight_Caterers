@@ -12,20 +12,20 @@ interface Service {
 const services: Service[] = [
   {
     id: "wedding",
-    title: "Wedding Catering",
-    description: "Create unforgettable memories with our elegant wedding catering services. From intimate ceremonies to grand receptions, we deliver excellence.",
+    title: "Weddings",
+    description: "Elegant, thoughtfully curated celebrations that reflect your vision.",
     icon: "💍",
   },
   {
     id: "corporate",
     title: "Corporate Events",
-    description: "Impress your clients and employees with professional catering for conferences, meetings, and corporate celebrations.",
+    description: "Professional catering for conferences, meetings, and team gatherings.",
     icon: "🏢",
   },
   {
     id: "private",
-    title: "Private Parties",
-    description: "Make your celebrations special with customized menus for birthdays, anniversaries, and intimate gatherings.",
+    title: "Private Gatherings",
+    description: "Customized menus for birthdays, anniversaries, and intimate occasions.",
     icon: "🎉",
   },
 ];

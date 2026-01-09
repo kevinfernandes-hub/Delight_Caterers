@@ -3,20 +3,14 @@
 import styles from "./page.module.css";
 
 export default function ContactPage() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Form submission logic will be added later
-    alert("Thank you for your enquiry! We will contact you within 24 hours.");
-  };
-
   return (
     <main className={styles.contactMain}>
       {/* Page Header */}
       <section className={styles.pageHeader}>
         <div className={styles.headerContent}>
-          <h1 className={styles.pageTitle}>Contact Us</h1>
+          <h1 className={styles.pageTitle}>Contact Delight Caterers</h1>
           <p className={styles.pageSubtitle}>
-            Get in touch for catering enquiries & bookings
+            Reach out to us for your catering needs and event enquiries
           </p>
         </div>
       </section>
@@ -30,50 +24,37 @@ export default function ContactPage() {
               <div className={styles.infoCard}>
                 <h2 className={styles.infoTitle}>Delight Caterers</h2>
 
-                <div className={styles.ratingBadge}>
-                  <span className={styles.ratingValue}>★ 4.8</span>
-                  <span className={styles.ratingLabel}>Highly Rated</span>
-                </div>
-
                 <div className={styles.infoBlock}>
-                  <h3 className={styles.infoLabel}>Address</h3>
+                  <h3 className={styles.infoLabel}>📍 Address</h3>
                   <p className={styles.infoText}>
-                    Flat No. 2, Shakun Apartment,
-                    <br />
-                    Sheela Nagar Colony,
-                    <br />
-                    Opposite Vishal Daily Needs,
-                    <br />
-                    Near Gittikhadan Police Station,
-                    <br />
                     Katol Road,
                     <br />
-                    Nagpur – 440013,
+                    Nagpur, Maharashtra
                     <br />
-                    Maharashtra, India
+                    India
                   </p>
                 </div>
 
                 <div className={styles.infoBlock}>
-                  <h3 className={styles.infoLabel}>Phone</h3>
+                  <h3 className={styles.infoLabel}>📞 Phone</h3>
                   <p className={styles.infoText}>
-                    <a href="tel:+919054953561" className={styles.infoLink}>
-                      +91 90549 53561
+                    <a href="tel:+919689330035" className={styles.infoLink}>
+                      +91 96893 30035
                     </a>
                   </p>
                 </div>
 
                 <div className={styles.infoBlock}>
-                  <h3 className={styles.infoLabel}>Alternate Mobile</h3>
+                  <h3 className={styles.infoLabel}>✉️ Email</h3>
                   <p className={styles.infoText}>
-                    <a href="tel:+919372502345" className={styles.infoLink}>
-                      +91 93725 02345
+                    <a href="mailto:Merwynfernandes2015@gmail.com" className={styles.infoLink}>
+                      Merwynfernandes2015@gmail.com
                     </a>
                   </p>
                 </div>
 
                 <div className={styles.infoBlock}>
-                  <h3 className={styles.infoLabel}>Opening Hours</h3>
+                  <h3 className={styles.infoLabel}>🕐 Hours</h3>
                   <p className={styles.infoText}>
                     9:00 AM – 9:00 PM
                     <br />
@@ -81,115 +62,30 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                <div className={styles.responseNote}>
-                  <p>✓ Available for enquiries during business hours</p>
+                <div className={styles.calloutBox}>
+                  <p className={styles.calloutText}>We'd love to cater your next event!</p>
+                  <a href="tel:+919054953561" className={styles.callButton}>
+                    📞 Call Now
+                  </a>
                 </div>
               </div>
             </div>
 
-            {/* Right Column - Contact Form */}
-            <div className={styles.contactFormContainer}>
-              <form className={styles.contactForm} onSubmit={handleSubmit}>
-                <h2 className={styles.formTitle}>Send an Enquiry</h2>
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="name" className={styles.formLabel}>
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className={styles.formInput}
-                    placeholder="Your full name"
-                    required
-                  />
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="phone" className={styles.formLabel}>
-                    Phone Number *
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className={styles.formInput}
-                    placeholder="Your phone number"
-                    required
-                  />
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="email" className={styles.formLabel}>
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className={styles.formInput}
-                    placeholder="your.email@example.com"
-                    required
-                  />
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="eventType" className={styles.formLabel}>
-                    Event Type *
-                  </label>
-                  <select
-                    id="eventType"
-                    name="eventType"
-                    className={styles.formSelect}
-                    required
-                  >
-                    <option value="">Select an event type</option>
-                    <option value="wedding">Wedding</option>
-                    <option value="corporate">Corporate Event</option>
-                    <option value="birthday">Birthday Party</option>
-                    <option value="anniversary">Anniversary</option>
-                    <option value="engagement">Engagement</option>
-                    <option value="other">Other Event</option>
-                  </select>
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="message" className={styles.formLabel}>
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    className={styles.formTextarea}
-                    placeholder="Tell us about your event, expected number of guests, date, etc."
-                    rows={5}
-                    required
-                  ></textarea>
-                </div>
-
-                <button type="submit" className={styles.submitButton}>
-                  Send Enquiry
-                </button>
-              </form>
+            {/* Right Column - Google Maps */}
+            <div className={styles.mapContainer}>
+              <div className={styles.mapWrapper}>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.8916771667143!2d79.06022!3d21.14567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4b8b8b8b8b8b9%3A0x0!2sKatol%20Road%2C%20Nagpur!5e0!3m2!1sen!2sin!4v1672531234567"
+                  width="100%"
+                  height="500"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className={styles.mapIframe}
+                ></iframe>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className={styles.urgentCTA}>
-        <div className={styles.ctaContent}>
-          <h3 className={styles.ctaTitle}>
-            Call us directly for quick bookings
-          </h3>
-          <div className={styles.ctaButtons}>
-            <a href="tel:+919054953561" className={styles.callButton}>
-              Call Now
-            </a>
-            <a href="tel:+919372502345" className={styles.callButton}>
-              Call Alternate
-            </a>
           </div>
         </div>
       </section>

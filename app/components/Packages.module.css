@@ -1,0 +1,94 @@
+.packagesSection {
+  padding: 5rem 1.5rem;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #2d2520;
+  margin-bottom: 3rem;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #f8f7f6;
+  padding: 2.5rem;
+  border: 1px solid #e8dfd6;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cardTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2d2520;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #8b7355;
+  margin-bottom: 1.5rem;
+}
+
+.pricePerPlate {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6b5d54;
+}
+
+.inclusions {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  text-align: left;
+  color: #6b5d54;
+}
+
+.inclusions li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.inclusions li::before {
+  content: '✓';
+  color: #8b7355;
+  position: absolute;
+  left: 0;
+}
+
+.button {
+  margin-top: auto;
+  background-color: #8b7355;
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #6b5842;
+}

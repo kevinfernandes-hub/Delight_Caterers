@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="riceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#daa520;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffc700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffb700;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#riceGrad)"/>
+  <circle cx="200" cy="200" r="90" fill="#fff9e6" opacity="0.35"/>
+  <circle cx="980" cy="380" r="110" fill="#fff9e6" opacity="0.3"/>
+  <text x="600" y="320" font-size="72" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">🍚 Rice & Breads</text>
+</svg>

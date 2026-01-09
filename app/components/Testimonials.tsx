@@ -66,7 +66,7 @@ export default function Testimonials() {
         <div className={styles.header}>
           <h2 className={styles.title}>What Our Clients Say</h2>
           <p className={styles.subtitle}>
-            Trusted by hundreds of satisfied customers across Nagpur
+            Real feedback from those who've trusted us with their events
           </p>
         </div>
 

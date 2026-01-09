@@ -16,6 +16,22 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors);
 
+// Root API endpoint
+app.get('/api', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Delight Caterers API',
+    version: '1.0.0',
+    endpoints: {
+      health: '/api/health',
+      orders: '/api/orders',
+      bills: '/api/bills',
+      customers: '/api/customers',
+      menu: '/api/menu',
+    },
+  });
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({

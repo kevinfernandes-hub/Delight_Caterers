@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="startersGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffa500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8c42;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#startersGrad)"/>
+  <circle cx="200" cy="150" r="80" fill="#fff9e6" opacity="0.4"/>
+  <circle cx="1000" cy="450" r="120" fill="#fff9e6" opacity="0.3"/>
+  <text x="600" y="320" font-size="72" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">🥡 Starters</text>
+</svg>

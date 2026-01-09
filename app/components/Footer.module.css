@@ -1,6 +1,6 @@
 .footer {
-  background-color: #1f2937;
-  color: #e5e7eb;
+  background-color: #2d2520;
+  color: #d1ccc4;
   padding: 3rem 0 0 0;
 }
 
@@ -20,28 +20,31 @@
 }
 
 .heading {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 500;
   margin: 0 0 0.5rem 0;
   color: white;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 .tagline {
-  font-size: 0.95rem;
-  color: #d1d5db;
+  font-size: 0.9rem;
+  color: #b8aea3;
   margin: 0;
-  line-height: 1.5;
-  font-weight: 300;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 .subheading {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 500;
   margin: 0 0 1rem 0;
   color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Contact Items */
@@ -50,23 +53,23 @@
   align-items: flex-start;
   gap: 0.75rem;
   margin-bottom: 0.75rem;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .icon {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   flex-shrink: 0;
   margin-top: 2px;
 }
 
 .contactItem a {
-  color: #e5e7eb;
+  color: #d1ccc4;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .contactItem a:hover {
-  color: #4f46e5;
+  color: #c4a574;
 }
 
 /* Links */
@@ -81,27 +84,21 @@
 }
 
 .links a {
-  color: #d1d5db;
+  color: #b8aea3;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
   display: inline-block;
 }
 
 .links a:hover {
-  color: #4f46e5;
-  padding-left: 0.25rem;
+  color: #c4a574;
 }
 
 /* Divider */
 .divider {
   height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
+  background: rgba(255, 255, 255, 0.08);
   margin: 0 2rem;
 }
 
@@ -109,12 +106,20 @@
 .copyright {
   padding: 2rem;
   text-align: center;
-  color: #9ca3af;
-  font-size: 0.9rem;
+  color: #8b7355;
+  font-size: 0.85rem;
 }
 
 .copyright p {
   margin: 0;
+  line-height: 1.6;
+}
+
+.credibility {
+  color: #8b7355;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-style: italic;
 }
 
 /* Mobile Responsive */
@@ -126,7 +131,7 @@
   }
 
   .heading {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 
   .subheading {
@@ -134,7 +139,7 @@
   }
 
   .column:first-child {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding-bottom: 1.5rem;
   }
 
@@ -144,7 +149,7 @@
 
   .copyright {
     padding: 1.5rem 1.5rem 2rem 1.5rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 }
 

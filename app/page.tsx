@@ -1,5 +1,13 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import About from "./components/About";
+import Services from "./components/Services";
+import HowWeWork from "./components/HowWeWork";
+import CuisineSpecialties from "./components/CuisineSpecialties";
+import ServiceAreas from "./components/ServiceAreas";
+import Gallery from "./components/Gallery";
+import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -7,6 +15,14 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
+      <About />
+      <Services />
+      <HowWeWork />
+      <CuisineSpecialties />
+      <ServiceAreas />
+      <Gallery />
+      <Testimonials />
+      <Contact />
       <Footer />
     </>
   );
